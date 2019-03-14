@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="@dimen/standart_padding"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_titulo"
+        android:textAllCaps="true"
+        android:textSize="@dimen/text_title"
+        android:gravity="center"
+        android:textColor="@color/text_negro"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/standart_padding"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="@dimen/standart_padding"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/entran"
+            android:layout_width="@dimen/boton_ancho"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="entran"
+            android:textSize="@dimen/text_title"
+            android:background="#A9F5A9"
+            android:layout_margin="@dimen/standart_padding"
+            />
+
+        <TextView
+            android:id="@+id/num_entran"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/text_negro"
+            android:textSize="@dimen/size_numero"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="@dimen/standart_padding"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/salen"
+            android:layout_width="@dimen/boton_ancho"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="salen"
+            android:textSize="@dimen/text_title"
+            android:background="#F8E0E6"
+            android:layout_margin="@dimen/standart_padding"/>
+
+        <TextView
+            android:id="@+id/num_salen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/text_negro"
+            android:textSize="@dimen/size_numero"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:padding="@dimen/standart_padding"
+        android:layout_gravity="center"
+        >
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

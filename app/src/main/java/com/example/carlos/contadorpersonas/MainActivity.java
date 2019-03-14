@@ -1,0 +1,88 @@
+package com.example.carlos.contadorpersonas;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    private Button entran;
+    private Button salen;
+    private Button reset;
+    private TextView num_entran;
+    private TextView num_salen;
+    private TextView num_adentro;
+
+    private int cont_entran;
+    private int cont_salen;
+    private int cont_adentro;
+
+
+    private View.OnClickListener clickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.entran:
+                    incrementar();
+                    break;
+                case R.id.salen:
+                    disminuir();
+                    break;
+                case R.id.reset:
+                    inicializar();
+                    break;
+
+            }
+        }
+    };
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        num_entran = (TextView) findViewById(R.id.num_entran);
+        num_salen = (TextView) findViewById(R.id.num_salen);
+        num_adentro = (TextView) findViewById(R.id.num_adentro);
+        entran = (Button) findViewById(R.id.entran);
+        entran.setOnClickListener(clickListener);
+        salen = (Button) findViewById(R.id.salen);
+        salen.setOnClickListener(clickListener);
+        reset = (Button) findViewById(R.id.reset);
+        reset.setOnClickListener(clickListener);
+
+
+        inicializar();
+
+    }
+
+    private void inicializar() {
+        cont_entran = 0;
+        cont_salen = 0;
+        cont_adentro = 0;
+        num_adentro.setText(cont_adentro + "");
+        num_entran.setText(cont_entran + "");
+        num_salen.setText(cont_salen + "");
+    }
+
+
+    private void incrementar() {
+        cont_entran++;
+        cont_adentro++;
+        num_adentro.setText(cont_adentro + "");
+        num_entran.setText(cont_entran + "");
+
+    }
+
+    private void disminuir() {
+        if(cont_adentro > 0) {
+            cont_adentro--;
+            cont_salen++;
+            num_adentro.setText(cont_adentro + "");
+            num_salen.setText(cont_salen + "");
+        }
+
+
+
+    }
+}

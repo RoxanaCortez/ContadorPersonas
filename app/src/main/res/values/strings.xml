@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ContadorPersonas</string>
+    <string name="text_titulo">contador de personas</string>
+</resources>
