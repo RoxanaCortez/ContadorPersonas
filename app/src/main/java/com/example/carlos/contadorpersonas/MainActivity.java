@@ -12,11 +12,11 @@ public class MainActivity extends AppCompatActivity {
     private Button reset;
     private TextView num_entran;
     private TextView num_salen;
-    private TextView num_adentro;
+
 
     private int cont_entran;
     private int cont_salen;
-    private int cont_adentro;
+
 
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -29,9 +29,6 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.salen:
                     disminuir();
                     break;
-                case R.id.reset:
-                    inicializar();
-                    break;
 
             }
         }
@@ -43,13 +40,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         num_entran = (TextView) findViewById(R.id.num_entran);
         num_salen = (TextView) findViewById(R.id.num_salen);
-        num_adentro = (TextView) findViewById(R.id.num_adentro);
         entran = (Button) findViewById(R.id.entran);
         entran.setOnClickListener(clickListener);
         salen = (Button) findViewById(R.id.salen);
         salen.setOnClickListener(clickListener);
-        reset = (Button) findViewById(R.id.reset);
-        reset.setOnClickListener(clickListener);
+
 
 
         inicializar();
@@ -59,8 +54,6 @@ public class MainActivity extends AppCompatActivity {
     private void inicializar() {
         cont_entran = 0;
         cont_salen = 0;
-        cont_adentro = 0;
-        num_adentro.setText(cont_adentro + "");
         num_entran.setText(cont_entran + "");
         num_salen.setText(cont_salen + "");
     }
@@ -68,18 +61,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void incrementar() {
         cont_entran++;
-        cont_adentro++;
-        num_adentro.setText(cont_adentro + "");
         num_entran.setText(cont_entran + "");
 
     }
 
     private void disminuir() {
-        if(cont_adentro > 0) {
-            cont_adentro--;
+        if(cont_entran > 0) {
             cont_salen++;
-            num_adentro.setText(cont_adentro + "");
+            cont_entran--;
             num_salen.setText(cont_salen + "");
+            num_entran.setText(cont_entran + "");
         }
 
 
