@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">ContadorPersonas</string>
     <string name="text_titulo">contador de personas</string>
+    <string name="txt_entran">Entran</string>
+    <string name="txt_salen">Salen</string>
+    <string name="num_inicial">0</string>
+    <string name="bt_add">ADD</string>
 </resources>

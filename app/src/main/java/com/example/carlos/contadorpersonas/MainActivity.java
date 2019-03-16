@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
                     incrementar();
                     break;
                 case R.id.salen:
-                    disminuir();
+                    incrementar2();
                     break;
 
             }
@@ -65,15 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void disminuir() {
-        if(cont_entran > 0) {
-            cont_salen++;
-            cont_entran--;
-            num_salen.setText(cont_salen + "");
-            num_entran.setText(cont_entran + "");
-        }
-
-
+    private void incrementar2() {
+        cont_salen++;
+        num_salen.setText(cont_salen + "");
 
     }
 }
